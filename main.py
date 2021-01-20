@@ -15,7 +15,7 @@ map = folium.Map(location=[38.58, -99.09], zoom_start=6, tiles="Stamen Terrain")
 fg = folium.FeatureGroup(name="My Map")
 
 for lt, ln, el in zip(lat, lon, elev):
-    fg.add_child(folium.Marker(location=[lt, ln], popup=str(el), icon=folium.Icon(color='green')))
+    fg.add_child(folium.Marker(location=[lt, ln], popup=str(el)+" m", icon=folium.Icon(color='green')))
 
 #fg.add_child(folium.Marker(location=[37.2, -97.1], popup="Hi I am Marker", icon=folium.Icon(color='green')))
 
@@ -27,4 +27,3 @@ map.save("Map1.html")
 #map1.save("Map2.html")
 
 #tiles = "Stamen Terrain"
-
